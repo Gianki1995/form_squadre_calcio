@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio Squadre</title>
+    <link rel="stylesheet" href="../css/intro.css" />
+    <script src="../js/intro.js" defer></script>
+  </head>
+  <body>
+    <header class="form-container">
+      <h1>Esercizio sui form</h1>
+      <form name="cliente" autocomplete="off" method="post" action="server.php">
+        <fieldset>
+          <legend>Cliente</legend>
+          <p>
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              placeholder="Inserisci il nome"
+              id="nome"
+              name="nome"
+            />
+          </p>
+          <p>
+            <label for="cognome">Cognome</label>
+            <input
+              type="text"
+              placeholder="Inserisci il cognome"
+              id="cognome"
+              name="cognome"
+            />
+          </p>
+
+          <p>
+            <label for="eta">Età</label>
+            <input
+              type="text"
+              placeholder="Inserisci l'età"
+              id="eta"
+              name="eta"
+            />
+          </p>
+
+          <div id="squadraPreferita">
+            <span>Squadra preferita:</span>
+            <div>
+              <input
+                type="checkbox"
+                id="Roma"
+                name="squadraPreferita"
+                value="Roma"
+              />
+              <label for="Roma">Roma</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Lazio"
+                name="squadraPreferita"
+                value="Lazio"
+              />
+              <label for="Lazio">Lazio</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Milan"
+                name="squadraPreferita"
+                value="Milan"
+              />
+              <label for="Milan">Milan</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Inter"
+                name="squadraPreferita"
+                value="Inter"
+              />
+              <label for="Inter">Inter</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Napoli"
+                name="squadraPreferita"
+                value="Napoli"
+              />
+              <label for="Napoli">Napoli</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Altro"
+                name="squadraPreferita"
+                value="Altro"
+              />
+              <label for="Altro">Altro</label>
+            </div>
+          </div>
+
+          <div class="erroreForm">
+            Uno o più dei campi richiesti non è stato inserito o non è valido!
+          </div>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </header>
+    <div class="card-container">
+      <a
+        href="#"
+        aria-label="Torna al form"
+        title="Torna al form"
+        id="back-form"
+      ></a>
+    </div>
+  </body>
+</html>

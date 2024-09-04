@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
+* {
+  font-family: "Kurale", serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: cornflowerblue;
+}
+
+/* Quando visualizzo la card nascondo il resto del sito 
+per evitare possibili barre di scorrimento */
+header.form-container.hide-form {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+label[for="nome"],
+label[for="cognome"],
+label[for="eta"],
+div#squadraPreferita span {
+  display: inline-block;
+  min-width: 150px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  padding: 5px;
+  outline: none;
+  border: 2px ridge cornflowerblue;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  caret-color: cornflowerblue;
+  color: #333;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 2px 1px cornflowerblue;
+}
+
+::placeholder {
+  font-family: Kurale, serif;
+  font-size: smaller;
+}
+
+input[type="text"]:focus form fieldset {
+  border: 2px solid cornflowerblue;
+  border-radius: 2px;
+}
+
+form fieldset {
+  position: relative;
+  padding: 1em;
+  border: 2px solid cornflowerblue;
+  border-radius: 2px;
+  max-width: 680px;
+  margin: auto;
+  background-color: white;
+}
+
+form fieldset > :is(p, div) {
+  max-width: 60%;
+  margin-left: 20%;
+}
+
+/* form p,
+form div {
+  text-align: center;
+} */
+
+p#squadraPreferita {
+  margin-bottom: 3px;
+}
+
+button {
+  background-color: cornflowerblue;
+  padding: 0.8em;
+  box-shadow: 0 0 0.5em cornflowerblue;
+  border-radius: 0.3em;
+  display: block;
+  width: 60%;
+  margin: 1em auto 0.5em;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  font-size: 1.05em;
+  cursor: pointer;
+}
+
+button:hover {
+  color: cornflowerblue;
+  background-color: #333;
+  box-shadow: 0 0 0.5em #000;
+  border-color: #333;
+}
+
+legend {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  top: 10px;
+  left: 20px;
+  font-weight: bold;
+  font-size: larger;
+  color: cornflowerblue;
+  font-size: 1.5em;
+  text-shadow: 0 0 1px #555;
+  font-style: italic;
+}
+
+.erroreForm {
+  border: 1px solid crimson;
+  font-weight: bold;
+  background-color: rgb(233, 62, 32);
+  padding: 0.8em;
+  border-radius: 0.3em;
+  width: 60%;
+  color: rgb(109, 12, 12);
+  display: none;
+  margin: 1em auto 0;
+  text-align: center;
+}
+
+.erroreFormVisualizza {
+  display: block;
+}
+
+.card {
+  background-color: azure;
+  border: 1px solid cornflowerblue;
+  box-shadow: 0 0 0.2em cornflowerblue;
+  border-radius: 0.3em;
+  padding: 1em;
+  width: 300px;
+  min-height: 300px;
+  color: rgb(5, 5, 66);
+  font-size: larger;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card div.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-clip: content-box;
+  background-color: rgb(5, 5, 66);
+  border: 6px double rgb(5, 5, 66);
+}
+
+.card img {
+  width: 30px;
+}
+
+.card :is(h2, h3) {
+  margin: 0;
+  font-weight: 600;
+}
+
+.card h3 {
+  margin-top: 1em;
+}
+
+div.card-container {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(5, 5, 66);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+div.card-container.display-card {
+  opacity: 1;
+  z-index: 1;
+}
+
+a#back-form {
+  background-image: url("../../assets/img/arrow-back-azure.png");
+  width: 34px;
+  height: 34px;
+  /* background-color: #f0ffff; */
+
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
